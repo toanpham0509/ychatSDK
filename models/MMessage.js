@@ -22,6 +22,7 @@ module.exports.addNew = function (data, next) {
  * @param next
  */
 module.exports.update = function(messageId, dataUpdate, next){
+    console.log(dataUpdate);
     Message.findByIdAndUpdate(
         new ObjectId(messageId),
         {
@@ -89,7 +90,6 @@ module.exports.getNewMessagesBy2UserId = function(data, next) {
         next(data);
     });
 }
-
 /**
  * Get list messages
  *
